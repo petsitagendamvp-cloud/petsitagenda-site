@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suporte - PetSitAgenda</title>
+<meta name="description" content="Fale com o suporte do PetSitAgenda.">
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="topo">
+  <div class="container topo-conteudo">
+    <a href="/" class="logo">
+      <img src="logo-horizontal.png" alt="PetSitAgenda">
+    </a>
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="faq.html">FAQ</a>
+      <a href="suporte.html">Suporte</a>
+      <a href="documentacao.html">Documentação</a>
+      <a href="https://petsitagenda-frontend.vercel.app" class="btn btn-primario">Entrar</a>
+    </nav>
+  </div>
+</header>
+
+<section class="secao">
+  <div class="container">
+    <h2>Suporte</h2>
+    <p class="subtitulo">Estamos aqui para ajudar você</p>
+
+    <div class="card" style="max-width:600px;margin:0 auto;">
+      <h3 style="margin-top:0;">Como podemos ajudar?</h3>
+      <p style="color:var(--cor-texto-suave);">
+        Antes de enviar, confira as
+        <a href="faq.html" style="color:var(--cor-laranja-escuro);font-weight:600;">Perguntas frequentes</a>.
+        Sua dúvida pode estar lá.
+      </p>
+
+      <label>Nome</label>
+      <input type="text" id="s-nome">
+
+      <label>E-mail</label>
+      <input type="email" id="s-email">
+
+      <label>Assunto</label>
+      <select id="s-assunto">
+        <option value="Dúvida">Dúvida sobre o app</option>
+        <option value="Bug">Encontrei um erro</option>
+        <option value="Sugestão">Sugestão de melhoria</option>
+        <option value="Financeiro">Questão financeira</option>
+        <option value="Outro">Outro assunto</option>
+      </select>
+
+      <label>Mensagem</label>
+      <textarea id="s-mensagem" rows="5" placeholder="Descreva sua dúvida ou problema com o máximo de detalhes possível..."></textarea>
+
+      <div style="display:flex;justify-content:flex-end;margin-top:8px;">
+        <button class="btn btn-primario" onclick="enviarSAC()">Enviar mensagem</button>
+      </div>
+
+      <hr style="margin:24px 0;border:none;border-top:1px solid var(--cor-borda);">
+
+      <h4 style="margin-top:0;">Outros canais</h4>
+      <p style="font-size:14px;color:var(--cor-texto-suave);">
+        E-mail: <a href="mailto:contato@petsitagenda.com.br" style="color:var(--cor-laranja-escuro);">contato@petsitagenda.com.br</a><br>
+        Atendimento: segunda a sexta, 9h às 18h
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer class="rodape">
+  <div class="container rodape-conteudo">
+    <div>
+      <strong>PetSitAgenda</strong>
+      <p>Feito com carinho para quem cuida de pets.</p>
+    </div>
+    <div class="rodape-links">
+      <a href="index.html">Início</a>
+      <a href="faq.html">FAQ</a>
+      <a href="suporte.html">Suporte</a>
+      <a href="documentacao.html">Documentação</a>
+      <a href="termos.html">Termos de Uso</a>
+      <a href="privacidade.html">Privacidade</a>
+    </div>
+    <p class="rodape-copy">© 2026 PetSitAgenda. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script>
+  function enviarSAC() {
+    const nome = document.getElementById("s-nome").value.trim();
+    const email = document.getElementById("s-email").value.trim();
+    const assunto = document.getElementById("s-assunto").value;
+    const mensagem = document.getElementById("s-mensagem").value.trim();
+
+    if (!nome || !email || mensagem.length < 10) {
+      alert("Preencha nome, e-mail e uma mensagem com pelo menos 10 caracteres.");
+      return;
+    }
+
+    const corpo = encodeURIComponent(
+      `Nome: ${nome}\nE-mail: ${email}\nAssunto: ${assunto}\n\nMensagem:\n${mensagem}`
+    );
+    window.location.href = `mailto:contato@petsitagenda.com.br?subject=${encodeURIComponent("[PetSitAgenda] " + assunto)}&body=${corpo}`;
+  }
+</script>
+
+</body>
+</html>

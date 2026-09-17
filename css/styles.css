@@ -165,3 +165,111 @@ a { color: inherit; text-decoration: none; }
   .secao { padding: 48px 0; }
   .secao h2 { font-size: 24px; }
 }
+
+/* FAQ */
+.faq-item {
+  background: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  box-shadow: var(--sombra);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-item summary::marker,
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item summary::after {
+  content: "＋";
+  color: var(--cor-laranja);
+  font-weight: 700;
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+.faq-item[open] summary::after {
+  content: "－";
+}
+
+.faq-item p {
+  margin: 12px 0 0;
+  color: var(--cor-texto-suave);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Formulários */
+label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--cor-texto-suave);
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 12px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: var(--raio-pequeno);
+  border: 1px solid var(--cor-borda);
+  font-family: inherit;
+  font-size: 14px;
+  background: #FFFFFF;
+  color: var(--cor-texto);
+  display: block;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #B8B8B8;
+  opacity: 1;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid var(--cor-laranja);
+  outline-offset: 1px;
+}
+
+/* Conteúdo interno do FAQ/Documentação */
+.faq-conteudo {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--cor-borda);
+}
+
+.faq-conteudo h4 {
+  font-size: 15px;
+  margin: 16px 0 6px;
+  color: var(--cor-verde);
+}
+
+.faq-conteudo h4:first-child { margin-top: 0; }
+
+.faq-conteudo p,
+.faq-conteudo li {
+  font-size: 14px;
+  color: var(--cor-texto-suave);
+  line-height: 1.6;
+  margin: 0 0 8px;
+}
+
+.faq-conteudo ul {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+.faq-conteudo a {
+  color: var(--cor-laranja-escuro);
+  font-weight: 600;
+}

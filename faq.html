@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perguntas Frequentes - PetSitAgenda</title>
+<meta name="description" content="Dúvidas frequentes sobre o PetSitAgenda.">
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="topo">
+  <div class="container topo-conteudo">
+    <a href="/" class="logo">
+      <img src="logo-horizontal.png" alt="PetSitAgenda">
+    </a>
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="faq.html">FAQ</a>
+      <a href="suporte.html">Suporte</a>
+      <a href="documentacao.html">Documentação</a>
+      <a href="https://petsitagenda-frontend.vercel.app" class="btn btn-primario">Entrar</a>
+    </nav>
+  </div>
+</header>
+
+<section class="secao">
+  <div class="container">
+    <h2>Perguntas frequentes</h2>
+    <p class="subtitulo">Tire suas dúvidas sobre o PetSitAgenda</p>
+
+    <div style="max-width:800px;margin:0 auto;">
+
+      <details class="faq-item">
+        <summary>Como funciona o PetSitAgenda?</summary>
+        <p>É um sistema de agenda e gestão financeira para profissionais que cuidam de pets. Você cadastra tutores, pets, serviços, cria atendimentos e registra pagamentos.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Como cadastro um tutor?</summary>
+        <p>No app, vá em <strong>Tutores e Pets</strong>, clique em <strong>+ Novo tutor</strong>, preencha os dados e salve. O cadastro do pet abre automaticamente em seguida.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Como cadastro um pet?</summary>
+        <p>Ao cadastrar um tutor novo, o modal de pet abre automaticamente. Para tutores já cadastrados, clique em <strong>+ Adicionar pet</strong> ao lado do nome.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Qual a diferença entre Diária e Duração?</summary>
+        <p><strong>Diária</strong>: usada em serviços como Hospedagem e Creche, onde o pet fica um dia inteiro. Pode ter horário padrão de entrada e limite de saída.<br>
+        <strong>Duração</strong>: usada em serviços como Passeio e Visita, com tempo em minutos (ex: 30, 60, 90). A hora de início é definida em cada atendimento.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Como funciona a cobrança por pernoite?</summary>
+        <p>Serviços como Hospedagem podem ser marcados como <strong>Cobrar por pernoite</strong>. Nesse caso, uma hospedagem de 01 a 02 do mês gera apenas 1 diária, e não 2.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Como crio um atendimento?</summary>
+        <p>No <strong>Painel</strong> ou na <strong>Agenda</strong>, clique em <strong>+ Novo atendimento</strong>, selecione tutor, pet, serviço, datas e forma de cobrança.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Posso alterar um atendimento depois de criado?</summary>
+        <p>Sim, enquanto ele estiver <strong>Agendado</strong>. Clique em <strong>Editar</strong> e informe o motivo da alteração. Fica registrado no histórico do contrato.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Como registro um pagamento?</summary>
+        <p>Após finalizar um atendimento, o valor aparece em <strong>Financeiro</strong> como pendente. Clique em <strong>Registrar pagamento</strong>, escolha a forma e confirme.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>O que significa "cobrar após cada atendimento" ou "no final do período"?</summary>
+        <p><strong>Após cada atendimento</strong>: envia uma cobrança a cada atendimento finalizado.<br>
+        <strong>No final do período</strong>: envia uma única cobrança quando todos os atendimentos do contrato forem concluídos.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Posso excluir um tutor ou pet?</summary>
+        <p>Sim, desde que não tenham contratos ou atendimentos vinculados. Caso contrário, primeiro exclua os registros dependentes.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Meus dados estão seguros?</summary>
+        <p>Sim. Utilizamos autenticação segura via Supabase, com tokens JWT e conexões criptografadas. Seus dados ficam apenas na sua conta.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Funciona no celular?</summary>
+        <p>Sim. O PetSitAgenda é responsivo e pode ser adicionado à tela inicial do celular como um aplicativo, tanto no Android quanto no iPhone.</p>
+      </details>
+
+      <p style="margin-top:32px;text-align:center;">
+        Não encontrou o que procurava? <a href="suporte.html" style="color:var(--cor-laranja-escuro);font-weight:600;">Fale com a gente</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer class="rodape">
+  <div class="container rodape-conteudo">
+    <div>
+      <strong>PetSitAgenda</strong>
+      <p>Feito com carinho para quem cuida de pets.</p>
+    </div>
+    <div class="rodape-links">
+      <a href="index.html">Início</a>
+      <a href="faq.html">FAQ</a>
+      <a href="suporte.html">Suporte</a>
+      <a href="documentacao.html">Documentação</a>
+      <a href="termos.html">Termos de Uso</a>
+      <a href="privacidade.html">Privacidade</a>
+    </div>
+    <p class="rodape-copy">© 2026 PetSitAgenda. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+</body>
+</html>
