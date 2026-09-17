@@ -50,10 +50,15 @@ a { color: inherit; text-decoration: none; }
   padding-bottom: 16px;
 }
 
-.logo-marca {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--cor-verde);
+..logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+  display: block;
 }
 
 .menu {
