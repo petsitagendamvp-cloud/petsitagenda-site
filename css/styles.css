@@ -132,9 +132,17 @@ a { color: inherit; text-decoration: none; }
 /* Cards */
 .grid-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
+
+/* Em telas pequenas, vira 1 coluna */
+@media (max-width: 600px) {
+  .grid-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 .card {
   background: var(--cor-card);
