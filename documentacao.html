@@ -13,16 +13,18 @@
 
 <header class="topo">
   <div class="container topo-conteudo">
-    <a href="/" class="logo">
+    <a href="index.html" class="logo">
       <img src="logo-horizontal.png" alt="PetSitAgenda">
     </a>
     <nav class="menu">
+      <a href="index.html">Início</a>
       <a href="index.html#funcionalidades">Funcionalidades</a>
+      <a href="index.html#sobre">Sobre</a>
       <a href="index.html#planos">Planos</a>
       <a href="faq.html">FAQ</a>
       <a href="suporte.html">Suporte</a>
       <a href="documentacao.html">Documentação</a>
-      <a href="https://petsitagenda-frontend.vercel.app" class="btn btn-primario">Entrar</a>
+      <a href="https://petsitagenda-frontend.vercel.app" class="btn btn-primario" target="_blank" rel="noopener">Cadastro / Login</a>
     </nav>
   </div>
 </header>
@@ -38,7 +40,7 @@
         <summary>Guia rápido</summary>
         <div class="faq-conteudo">
           <h4>1. Criar sua conta</h4>
-          <p>Acesse <a href="https://petsitagenda-frontend.vercel.app" style="color:var(--cor-laranja-escuro);">o app</a>, clique em <strong>Criar conta de profissional</strong>, preencha nome, e-mail, telefone e senha.</p>
+          <p>Acesse <a href="https://petsitagenda-frontend.vercel.app" target="_blank" rel="noopener" style="color:var(--cor-laranja-escuro);">o app</a>, clique em <strong>Criar conta de profissional</strong>, preencha nome, e-mail, telefone e senha.</p>
 
           <h4>2. Primeiros passos</h4>
           <p>Recomendamos esta ordem:</p>
@@ -50,7 +52,7 @@
           </ul>
 
           <h4>3. Finalizar e cobrar</h4>
-          <p>No dia do atendimento, abra a <strong>Agenda</strong>, clique em <strong>Finalizar</strong>. O valor entra automaticamente no <strong>Financeiro</strong> como pendente. Quando receber, clique em <strong>Registrar pagamento</strong>.</p>
+          <p>No dia do atendimento, abra a <strong>Agenda</strong>, clique em <strong>Finalizar</strong>. A cobrança é gerada automaticamente no <strong>Financeiro</strong> com status Pendente. Quando receber, clique em <strong>Registrar pagamento</strong>.</p>
         </div>
       </details>
 
@@ -62,7 +64,7 @@
           <p><strong>Duração</strong>: usada em Passeio e Visita. Você define a duração em minutos (ex: 30, 60, 90). A hora de início é definida em cada atendimento.</p>
 
           <h4>Preços</h4>
-          <p>Cada serviço tem preço base e adicionais opcionais para <strong>sábado</strong>, <strong>domingo</strong> e <strong>feriado</strong>.</p>
+          <p>Cada serviço tem preço base e valores específicos para <strong>sábado</strong>, <strong>domingo</strong> e <strong>feriado</strong>. O sistema aplica o valor correto conforme o dia do atendimento.</p>
 
           <h4>Pernoite</h4>
           <p>Marque <strong>Cobrar por pernoite</strong> em Hospedagem. Assim, uma hospedagem de 01 a 02 gera 1 diária (não 2).</p>
@@ -79,7 +81,10 @@
           <p>No app, vá em <strong>Tutores e Pets</strong> → <strong>+ Novo tutor</strong>. Preencha nome, e-mail, telefone e endereço. Ao salvar, o cadastro de pet abre automaticamente.</p>
 
           <h4>Cadastrar um pet</h4>
-          <p>Informe nome, espécie, sexo, porte, data de nascimento, características e <strong>cuidados especiais</strong> (alergias, medicação, restrições).</p>
+          <p>Informe nome, espécie, sexo, porte, data de nascimento, características e cuidados especiais (alergias, medicação, restrições).</p>
+
+          <h4>Adicionar mais pets ao mesmo tutor</h4>
+          <p>Clique em <strong>+ Adicionar pet</strong> ao lado do nome do tutor. Você pode ter quantos pets precisar por tutor.</p>
 
           <h4>Editar e excluir</h4>
           <p>Use os botões <strong>Editar</strong> e <strong>Excluir</strong> ao lado do tutor ou do pet. Só é possível excluir se não houver contratos ou atendimentos vinculados.</p>
@@ -95,19 +100,22 @@
           <h4>Criar atendimento</h4>
           <p>No <strong>Painel</strong> ou na <strong>Agenda</strong>, clique em <strong>+ Novo atendimento</strong>. Selecione tutor, pet, serviço, datas e forma de cobrança. Se for serviço de Duração, informe a hora de início.</p>
 
+          <h4>Contratos por período</h4>
+          <p>Se você criar um contrato de vários dias (ex: 1 a 5 de outubro), o sistema <strong>desmembra em um lançamento por dia</strong> na agenda. Assim você acompanha dia a dia e cobra conforme configurado.</p>
+
           <h4>Ações por atendimento</h4>
           <ul>
             <li><strong>Contrato</strong>: abre os detalhes, valor e histórico de alterações.</li>
-            <li><strong>Editar</strong>: altera data e hora (com registro de motivo).</li>
+            <li><strong>Editar</strong>: altera data e hora (com registro de motivo e quem solicitou).</li>
             <li><strong>Cancelar</strong>: só se ainda estiver Agendado.</li>
             <li><strong>Finalizar</strong>: gera cobrança no Financeiro.</li>
           </ul>
 
           <h4>Filtros</h4>
-          <p>Filtre por <strong>período</strong> (hoje, 7, 15, 30, 90 dias) e por <strong>status</strong> (agendados, realizados, cancelados). Os filtros ficam salvos no seu navegador.</p>
+          <p>Filtre por <strong>período</strong> (hoje, 7, 15, 30, 60 ou 90 dias) e por <strong>status</strong> (agendados, realizados, cancelados). Os filtros ficam salvos no seu navegador.</p>
 
           <h4>Pernoite e feriados</h4>
-          <p>Em serviços com pernoite, o sistema gera 1 atendimento por noite. Feriados recebem o adicional configurado no serviço.</p>
+          <p>Em serviços com pernoite, o sistema gera 1 atendimento por noite. Feriados nacionais são detectados automaticamente e recebem o valor configurado no serviço.</p>
         </div>
       </details>
 
@@ -115,16 +123,53 @@
         <summary>Financeiro</summary>
         <div class="faq-conteudo">
           <h4>Como o valor chega aqui</h4>
-          <p>Ao finalizar um atendimento, o sistema cria automaticamente um registro no Financeiro com status <strong>Pendente</strong>.</p>
+          <p>Ao finalizar um atendimento, o sistema cria automaticamente um registro no Financeiro com status <strong>Pendente</strong>. Se o contrato estiver configurado como "cobrar no final do período", a cobrança só é gerada quando todos os atendimentos do contrato forem concluídos.</p>
 
           <h4>Registrar pagamento</h4>
-          <p>Localize o pendente, clique em <strong>Registrar pagamento</strong>, escolha a forma (Pix, dinheiro, cartão, etc.) e confirme.</p>
+          <p>Localize o pendente, clique em <strong>Registrar pagamento</strong>, escolha a forma (Pix, dinheiro, cartão, transferência) e confirme. Um recibo é enviado automaticamente por e-mail ao tutor.</p>
 
-          <h4>Histórico</h4>
-          <p>O histórico mostra a data do atendimento, a data do pagamento e a forma escolhida.</p>
+          <h4>Painel do financeiro</h4>
+          <p>No topo você vê o <strong>Total Pendente</strong> e o <strong>Total Recebido</strong>. Abaixo, a lista de cobranças pendentes e o histórico de pagamentos em ordem de data.</p>
 
           <h4>Cobrança agrupada</h4>
-          <p>Contratos com modo <strong>No final do período</strong> agrupam todos os pendentes em uma única cobrança.</p>
+          <p>Contratos com modo <strong>No final do período</strong> agrupam todos os pendentes em uma única cobrança por e-mail.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Contratos</summary>
+        <div class="faq-conteudo">
+          <h4>O que é um contrato</h4>
+          <p>É o vínculo entre tutor, pet e serviço por um período. Um contrato gera vários atendimentos (um por dia).</p>
+
+          <h4>Consultar um contrato</h4>
+          <p>Na Agenda, clique em <strong>Contrato</strong> em qualquer atendimento. Você vê o tutor, pet, serviço, período, valor por atendimento, forma de cobrança e histórico de alterações.</p>
+
+          <h4>Alterar data ou hora</h4>
+          <p>É possível alterar a data e a hora de um atendimento agendado. <strong>O serviço não pode ser alterado</strong> depois que o contrato é criado. Todas as alterações ficam registradas com motivo e quem solicitou.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Adicionar o app à tela inicial do celular</summary>
+        <div class="faq-conteudo">
+          <h4>Android (Chrome)</h4>
+          <ul>
+            <li>Abra o PetSitAgenda no navegador Chrome.</li>
+            <li>Toque no menu (três pontos no canto superior).</li>
+            <li>Escolha <strong>"Adicionar à tela inicial"</strong>.</li>
+            <li>Confirme. O ícone aparece na sua tela como um app.</li>
+          </ul>
+
+          <h4>iPhone (Safari)</h4>
+          <ul>
+            <li>Abra o PetSitAgenda no navegador Safari.</li>
+            <li>Toque no botão <strong>Compartilhar</strong> (quadrado com seta para cima).</li>
+            <li>Escolha <strong>"Adicionar à Tela de Início"</strong>.</li>
+            <li>Confirme. O ícone aparece na sua tela como um app.</li>
+          </ul>
+
+          <p class="beneficio">💡 Depois de adicionar, o PetSitAgenda abre em tela cheia, como um app nativo.</p>
         </div>
       </details>
 
@@ -139,7 +184,7 @@
   <div class="container rodape-conteudo">
     <div>
       <strong>PetSitAgenda</strong>
-      <p>Feito com carinho para quem cuida de pets.</p>
+      <p>Feito no Brasil para quem cuida de pets.</p>
     </div>
     <div class="rodape-links">
       <a href="index.html">Início</a>

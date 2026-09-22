@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PetSitAgenda - Agenda e gestão para profissionais pet</title>
-<meta name="description" content="Sistema de agenda e gestão financeira para profissionais que cuidam de pets: hospedagem, creche, passeio e visita.">
+<title>PetSitAgenda - Gestão para profissionais que cuidam de pets</title>
+<meta name="description" content="Sistema brasileiro de agenda e gestão financeira para petsitters, creches, hotéis e adestradores. Organize tutores, pets, atendimentos e cobranças em um só lugar.">
 <link rel="icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="css/styles.css">
@@ -17,13 +17,14 @@
       <img src="logo-horizontal.png" alt="PetSitAgenda">
     </a>
     <nav class="menu">
+      <a href="index.html">Início</a>
       <a href="#funcionalidades">Funcionalidades</a>
       <a href="#sobre">Sobre</a>
       <a href="#planos">Planos</a>
       <a href="faq.html">FAQ</a>
       <a href="suporte.html">Suporte</a>
       <a href="documentacao.html">Documentação</a>
-      <a href="https://petsitagenda-frontend.vercel.app" class="btn btn-primario">Entrar</a>
+      <a href="https://petsitagenda-frontend.vercel.app" class="btn btn-primario" target="_blank" rel="noopener">Cadastro / Login</a>
     </nav>
   </div>
 </header>
@@ -32,10 +33,11 @@
 <section class="hero">
   <div class="container hero-conteudo">
     <div class="hero-texto">
-      <h1>Agenda e gestão completa para quem cuida de pets</h1>
-      <p>Organize tutores, pets, atendimentos, contratos e financeiro em um só lugar. Feito para o profissional brasileiro que cuida com carinho.</p>
+      <span class="selo-hero">🐾 Para quem cuida de pets no Brasil</span>
+      <h1>A gestão completa para quem cuida de pets</h1>
+      <p>O PetSitAgenda foi criado para petsitters, creches, hotéis e adestradores. Organize tutores, pets, atendimentos, contratos e financeiro em um só lugar — sem planilha, sem caderno, sem app de clínica adaptado.</p>
       <div class="hero-botoes">
-        <a href="https://petsitagenda-frontend.vercel.app" class="btn btn-primario btn-lg">Começar grátis</a>
+        <a href="https://petsitagenda-frontend.vercel.app" class="btn btn-primario btn-lg" target="_blank" rel="noopener">Começar grátis</a>
         <a href="#funcionalidades" class="btn btn-secundario btn-lg">Ver funcionalidades</a>
       </div>
     </div>
@@ -55,22 +57,22 @@
       <div class="card">
         <div class="icone">🏠</div>
         <h3>Hospedagem Pet</h3>
-        <p>O pet fica na sua casa por dias ou semanas. Cobre por pernoite, sem se confundir com datas de entrada e saída.</p>
+        <p>O pet fica na sua casa por dias ou semanas? Cobre por pernoite, com hora de entrada e saída definidas. Se o pet ficar além do combinado, você decide como cobrar.</p>
       </div>
       <div class="card">
         <div class="icone">☀️</div>
         <h3>Creche Pet</h3>
-        <p>O pet passa o dia e volta para casa. Controle horário de entrada, saída e valores diários com facilidade.</p>
+        <p>O pet passa o dia e volta para casa. Defina hora de entrada, hora limite de saída e adicionais para sábado, domingo e feriado.</p>
       </div>
       <div class="card">
         <div class="icone">🐕</div>
         <h3>Passeio Pet</h3>
-        <p>Individual ou em grupo. Defina a duração, o preço por passeio e adicionais para fim de semana e feriado.</p>
+        <p>Individual ou em grupo? Defina a duração, o preço por passeio e adicionais para fim de semana e feriado.</p>
       </div>
       <div class="card">
         <div class="icone">💚</div>
         <h3>Cuidados e Visita</h3>
-        <p>Vai na casa do tutor, alimenta, dá remédio, brinca. Tudo registrado com hora e observações importantes.</p>
+        <p>Vai na casa do tutor? Alimenta, dá remédio, brinca. Tudo registrado com hora e observações importantes no cadastro do atendimento.</p>
       </div>
     </div>
   </div>
@@ -80,13 +82,13 @@
 <section class="secao secao-clara">
   <div class="container">
     <h2>Como funciona</h2>
-    <p class="subtitulo">Em 3 passos, você profissionaliza seu atendimento</p>
+    <p class="subtitulo">Em 4 passos, você profissionaliza seu atendimento</p>
 
     <div class="grid-cards">
       <div class="card passo">
         <div class="passo-numero">1</div>
         <h3>Cadastre seus serviços</h3>
-        <p>Escolha os serviços que você oferece, defina preços, adicionais e horários. Tudo personalizável.</p>
+        <p>Cadastre os serviços que você oferece, com preços, adicionais e horários. Tudo personalizável.</p>
       </div>
       <div class="card passo">
         <div class="passo-numero">2</div>
@@ -96,7 +98,12 @@
       <div class="card passo">
         <div class="passo-numero">3</div>
         <h3>Controle o financeiro</h3>
-        <p>Finalize o atendimento, envie a cobrança automática e registre o pagamento quando receber.</p>
+        <p>Finalize o atendimento, a cobrança é gerada automaticamente, e registre o pagamento quando receber.</p>
+      </div>
+      <div class="card passo">
+        <div class="passo-numero">4</div>
+        <h3>Acompanhe o histórico</h3>
+        <p>Consulte todos os atendimentos realizados, com tutor, pet, serviço e valores. Veja também o total pendente e o total já recebido.</p>
       </div>
     </div>
   </div>
@@ -106,7 +113,7 @@
 <section id="funcionalidades" class="secao">
   <div class="container">
     <h2>Funcionalidades</h2>
-    <p class="subtitulo">Clique em cada uma para ver os detalhes</p>
+    <p class="subtitulo">Clique para ver mais detalhes</p>
 
     <div class="grid-cards">
       <div class="card card-clicavel" onclick="abrirFunc('agenda')">
@@ -117,31 +124,35 @@
       </div>
 
       <div class="card card-clicavel" onclick="abrirFunc('tutores')">
-        <img src="foto-carinhо.jpg" alt="Tutores e pets" class="card-imagem">
+        <img src="foto-3.jpg" alt="Tutores e pets" class="card-imagem">
         <h3>Tutores e pets</h3>
         <p>Cadastro completo, com cuidados especiais, alergias e observações importantes para cada pet.</p>
         <span class="card-link">Ver detalhes →</span>
       </div>
 
       <div class="card card-clicavel" onclick="abrirFunc('servicos')">
+        <img src="foto-carinhos.jpg" alt="Serviços personalizados" class="card-imagem">
         <h3>Serviços personalizados</h3>
         <p>Preços por dia ou por hora, adicionais para sábado, domingo e feriado, cobrança por pernoite.</p>
         <span class="card-link">Ver detalhes →</span>
       </div>
 
       <div class="card card-clicavel" onclick="abrirFunc('financeiro')">
+        <img src="foto-4.jpg" alt="Financeiro integrado" class="card-imagem">
         <h3>Financeiro integrado</h3>
         <p>Cobranças geradas automaticamente, registro de pagamentos e histórico completo.</p>
         <span class="card-link">Ver detalhes →</span>
       </div>
 
       <div class="card card-clicavel" onclick="abrirFunc('contratos')">
+        <img src="foto-6.jpg" alt="Contratos organizados" class="card-imagem">
         <h3>Contratos organizados</h3>
         <p>Valor por atendimento, observações do tutor e histórico de cada alteração registrado.</p>
         <span class="card-link">Ver detalhes →</span>
       </div>
 
       <div class="card card-clicavel" onclick="abrirFunc('celular')">
+        <img src="foto-1.jpg" alt="Funciona no celular" class="card-imagem">
         <h3>Funciona no celular</h3>
         <p>Use no computador, tablet ou celular. Adicione à tela inicial como um aplicativo.</p>
         <span class="card-link">Ver detalhes →</span>
@@ -154,38 +165,48 @@
 <section class="secao secao-clara">
   <div class="container">
     <h2>Por que escolher o PetSitAgenda</h2>
-    <p class="subtitulo">Feito para o dia a dia real de quem cuida de pets</p>
+    <p class="subtitulo">Pensado para a rotina real de quem cuida de pets no Brasil</p>
 
     <div class="grid-vantagens">
       <div class="vantagem">
+        <div class="icone">🇧🇷</div>
+        <h4>Feito no Brasil</h4>
+        <p>Sistema nacional pensado para a realidade do profissional pet.</p>
+      </div>
+      <div class="vantagem">
         <div class="icone">⏰</div>
         <h4>Economize tempo</h4>
-        <p>Cadastre o contrato e os atendimentos são gerados automaticamente.</p>
+        <p>Cadastre uma vez e o sistema gera os atendimentos sozinho.</p>
       </div>
       <div class="vantagem">
         <div class="icone">💰</div>
         <h4>Não perca pagamento</h4>
-        <p>Cobranças geradas na hora certa, sem esquecer nenhum atendimento.</p>
+        <p>Nunca mais esqueça uma cobrança. O sistema lembra por você.</p>
       </div>
       <div class="vantagem">
         <div class="icone">📱</div>
         <h4>Use onde estiver</h4>
-        <p>Celular, tablet ou computador. Sincroniza em tempo real.</p>
+        <p>Celular, tablet ou computador. Tudo sincronizado em tempo real.</p>
       </div>
       <div class="vantagem">
         <div class="icone">📝</div>
         <h4>Tudo registrado</h4>
-        <p>Observações do tutor, cuidados do pet, histórico de alterações.</p>
+        <p>Observações do tutor, cuidados do pet e histórico completo.</p>
       </div>
       <div class="vantagem">
         <div class="icone">🔒</div>
         <h4>Seus dados seguros</h4>
-        <p>Autenticação protegida, conexão criptografada, backup na nuvem.</p>
+        <p>Login protegido, conexão criptografada e backup na nuvem.</p>
       </div>
       <div class="vantagem">
         <div class="icone">✨</div>
         <h4>Imagem profissional</h4>
-        <p>Envie cobranças e recibos por e-mail com a sua marca.</p>
+        <p>Cobranças e recibos por e-mail com identidade do profissional (plano pago).</p>
+      </div>
+      <div class="vantagem">
+        <div class="icone">🎯</div>
+        <h4>Feito pro seu nicho</h4>
+        <p>Não é app de clínica adaptado. É para petsitter, creche, hotel e adestrador.</p>
       </div>
     </div>
   </div>
@@ -199,13 +220,21 @@
 
     <div class="sobre-conteudo">
       <div class="sobre-texto">
-        <p>O PetSitAgenda nasceu da vontade de ajudar profissionais que cuidam de pets a ter mais organização e mais tempo livre.</p>
-        <p>Muitos pet sitters, dog walkers e creches ainda controlam tudo por WhatsApp e caderno — e acabam perdendo informações, esquecendo cobranças ou confundindo horários.</p>
-        <p>Nosso objetivo é simples: dar a você <strong>uma ferramenta completa</strong>, simples de usar, que cuida da parte burocrática enquanto você cuida do que ama.</p>
-        <p>Feito no Brasil, para profissionais brasileiros. 🐾</p>
+        <p>Oi, sou a <strong>Claudia Dias</strong>, criadora do PetSitAgenda.</p>
+
+        <p>A ideia nasceu de uma constatação simples: <strong>faltava no Brasil uma ferramenta feita para quem cuida de pets</strong>. Petsitters, creches, hotéis e adestradores viviam reféns de planilhas, cadernos e WhatsApp — ou de sistemas de clínica que não foram feitos para a sua rotina.</p>
+
+        <p>Enquanto isso, informações se perdiam, cobranças eram esquecidas e horários se confundiam.</p>
+
+        <p>Decidi criar o PetSitAgenda para resolver isso: uma ferramenta completa, simples de usar, que cuida da parte burocrática enquanto você cuida do que ama.</p>
+
+        <p>Estou construindo isso no Brasil, para profissionais brasileiros. Se tiver sugestões ou críticas, entre em contato pelo formulário de suporte — sua opinião ajuda a melhorar. 🐾</p>
+
+        <p class="assinatura">— <strong>Claudia Dias</strong>, criadora do PetSitAgenda</p>
       </div>
+
       <div class="sobre-imagem">
-        <img src="foto-perfil-sobre.jpg" alt="PetSitAgenda">
+        <img src="foto-perfil-sobre.jpg" alt="Claudia Dias, criadora do PetSitAgenda">
       </div>
     </div>
   </div>
@@ -217,47 +246,83 @@
     <h2>Planos</h2>
     <p class="subtitulo">Comece grátis e cresça quando precisar</p>
 
-    <div class="grid-planos">
+    <div class="grid-planos grid-planos-2">
+      <!-- GRATUITO -->
       <div class="card plano">
-        <h3>Gratuito</h3>
-        <p class="preco">R$ 0</p>
+        <div class="plano-topo">
+          <h3>Gratuito</h3>
+          <p class="plano-desc">Perfeito para começar a se organizar</p>
+        </div>
+        <p class="preco">R$ 0<span>/mês</span></p>
         <ul>
           <li>Até <strong>50 tutores</strong></li>
           <li>Serviços e agenda completos</li>
           <li>Financeiro básico</li>
-          <li>Envio manual de cobranças</li>
+          <li>Envio automático de cobranças e recibos por e-mail aos tutores</li>
         </ul>
-        <a href="https://petsitagenda-frontend.vercel.app" class="btn btn-primario btn-bloco">Começar agora</a>
+        <a href="https://petsitagenda-frontend.vercel.app" class="btn btn-secundario btn-bloco" target="_blank" rel="noopener">Começar agora</a>
       </div>
 
+      <!-- PROFISSIONAL -->
       <div class="card plano plano-destaque">
-        <span class="selo">Mais popular</span>
-        <h3>Profissional</h3>
-        <p class="preco">R$ 29<span>/mês</span></p>
+        <span class="selo">Em finalização</span>
+        <div class="plano-topo">
+          <h3>Profissional</h3>
+          <p class="plano-desc">Para quem quer crescer sem limites</p>
+        </div>
+        <p class="preco">Em breve</p>
         <ul>
           <li><strong>Tutores ilimitados</strong></li>
-          <li><strong>Envio automático de cobranças e recibos por e-mail</strong></li>
-          <li><strong>Relatórios por tutor e mensal</strong></li>
-          <li>Exportação de dados</li>
+          <li>Serviços, agenda e financeiro <strong>completos</strong></li>
+          <li><strong>Consultas e relatórios</strong> por período, tutor, pet ou serviço</li>
+          <li>Envio automático de cobranças e recibos por e-mail</li>
+          <li>E-mails com a sua marca (o tutor não vê o PetSitAgenda)</li>
           <li>Suporte prioritário</li>
-          <li>Sem marca PetSitAgenda nos e-mails</li>
         </ul>
-        <a href="suporte.html" class="btn btn-primario btn-bloco">Começar com 14 dias grátis</a>
-      </div>
-
-      <div class="card plano">
-        <h3>Pro</h3>
-        <p class="preco">R$ 59<span>/mês</span></p>
-        <ul>
-          <li>Tudo do Profissional</li>
-          <li><strong>Múltiplos profissionais (equipe)</strong></li>
-          <li>Domínio próprio no portal do tutor</li>
-          <li>API de integração</li>
-          <li>Atendimento dedicado</li>
-        </ul>
-        <a href="suporte.html" class="btn btn-secundario btn-bloco">Falar com a gente</a>
+        <a href="suporte.html" class="btn btn-primario btn-bloco">Quero saber mais</a>
+        <p class="plano-nota">Entre em contato para saber quando estará disponível.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- MINI FAQ -->
+<section class="secao">
+  <div class="container">
+    <h2>Perguntas frequentes</h2>
+    <p class="subtitulo">Dúvidas? Veja as respostas mais comuns</p>
+
+    <div class="grid-faq">
+      <div class="faq-item">
+        <h4>Preciso instalar algum aplicativo?</h4>
+        <p>Não. O PetSitAgenda funciona direto no navegador do celular, tablet ou computador.</p>
+      </div>
+      <div class="faq-item">
+        <h4>O plano gratuito tem limite de tempo?</h4>
+        <p>Não. Você pode usar o plano gratuito pelo tempo que quiser, com até 50 tutores.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Posso cancelar quando quiser?</h4>
+        <p>Sim. Sem multa, sem burocracia. Você cancela com um clique.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Meus dados ficam seguros?</h4>
+        <p>Sim. Usamos conexão criptografada e backup automático na nuvem.</p>
+      </div>
+    </div>
+
+    <p class="faq-link">
+      <a href="faq.html">Ver todas as perguntas →</a>
+    </p>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="secao secao-cta">
+  <div class="container cta-conteudo">
+    <h2>Pronto para se organizar?</h2>
+    <p>Crie sua conta grátis e comece a usar hoje mesmo. Sem cartão de crédito.</p>
+    <a href="https://petsitagenda-frontend.vercel.app" class="btn btn-primario btn-lg" target="_blank" rel="noopener">Começar grátis</a>
   </div>
 </section>
 
@@ -274,7 +339,7 @@
   <div class="container rodape-conteudo">
     <div>
       <strong>PetSitAgenda</strong>
-      <p>Feito com carinho para quem cuida de pets.</p>
+      <p>Feito no Brasil para quem cuida de pets.</p>
     </div>
     <div class="rodape-links">
       <a href="index.html">Início</a>
@@ -296,14 +361,13 @@ const FUNCIONALIDADES = {
       <p>Sua agenda completa, com visão por período e status. Nunca mais perca um atendimento.</p>
       <h4>O que você encontra</h4>
       <ul>
-        <li>Atendimentos avulsos ou contratos por período</li>
-        <li>Filtros por tutor, pet, serviço ou status</li>
-        <li>Histórico de alterações (quem mudou, quando e por quê)</li>
+        <li>Atendimentos avulsos ou contratos por período. Contratos de vários dias são desmembrados em lançamentos diários na agenda</li>
+        <li>Filtros por período (hoje, 7, 15, 30, 60 e 90 dias) e por status (agendados, realizados, cancelados)</li>
+        <li>Histórico de alterações com motivo e quem solicitou. Em contratos, apenas data e hora podem ser alteradas</li>
         <li>Detecção automática de feriados nacionais</li>
-        <li>Hora de início e fim em cada serviço</li>
-        <li>Visualização em lista ou calendário</li>
+        <li>Serviços do tipo Diária: hora padrão de entrada e hora limite de saída. Serviços do tipo Duração: horário de início e duração definida no atendimento</li>
       </ul>
-      <p class="beneficio">💡 Você vê tudo dos próximos 30 dias em uma tela só.</p>
+      <p class="beneficio">💡 Você vê tudo dos próximos 90 dias em uma tela só.</p>
     `
   },
   tutores: {
@@ -313,10 +377,9 @@ const FUNCIONALIDADES = {
       <h4>O que você encontra</h4>
       <ul>
         <li>Cadastro com nome, e-mail, telefone e endereço</li>
-        <li>Múltiplos pets por tutor</li>
-        <li>Cuidados especiais, alergias e medicações</li>
-        <li>Histórico de todos os atendimentos</li>
-        <li>Portal do tutor (o cliente acompanha pelo celular)</li>
+        <li>Múltiplos pets por tutor (você pode adicionar novos pets a qualquer momento)</li>
+        <li>Cuidados especiais, alergias e observações registrados no cadastro do atendimento</li>
+        <li>Histórico de todos os atendimentos do tutor</li>
       </ul>
       <p class="beneficio">💡 Na hora do atendimento, tudo na mão. Sem caderninho, sem WhatsApp perdido.</p>
     `
@@ -328,12 +391,12 @@ const FUNCIONALIDADES = {
       <h4>O que você encontra</h4>
       <ul>
         <li>Tipo "Diária" (Hospedagem, Creche) ou "Duração" (Passeio, Visita)</li>
-        <li>Preço base + adicionais (sábado, domingo e feriado)</li>
+        <li>Preço base + valores específicos para sábado, domingo e feriado (aplicados conforme o dia do atendimento)</li>
         <li>Cobrança por pernoite para hospedagem</li>
-        <li>Hora padrão de entrada e limite de saída</li>
-        <li>Duração em minutos para serviços por hora</li>
+        <li>Hora padrão de entrada e hora limite de saída (serviços Diária)</li>
+        <li>Duração em minutos para serviços por hora (serviços Duração)</li>
       </ul>
-      <p class="beneficio">💡 Preço justo, sem esquecer taxa extra no fim de semana.</p>
+      <p class="beneficio">💡 Preço justo, sem esquecer a taxa extra no fim de semana.</p>
     `
   },
   financeiro: {
@@ -342,11 +405,11 @@ const FUNCIONALIDADES = {
       <p>Cobranças geradas automaticamente e controle total do que entrou.</p>
       <h4>O que você encontra</h4>
       <ul>
-        <li>Cobranças geradas ao finalizar o atendimento</li>
-        <li>Envio automático da cobrança por e-mail ao tutor</li>
+        <li>Cobranças geradas ao finalizar o atendimento, com envio automático por e-mail ao tutor</li>
         <li>Registro de pagamento (Pix, dinheiro, cartão, transferência)</li>
-        <li>Histórico completo (quem pagou, quando, quanto)</li>
-        <li>Total pendente e total recebido</li>
+        <li>Recibo de pagamento enviado automaticamente por e-mail ao tutor após registro</li>
+        <li>Histórico completo de quem pagou, quando e quanto</li>
+        <li>Painel com total pendente e total recebido</li>
       </ul>
       <p class="beneficio">💡 Você não esquece de cobrar nem perde o controle do que entrou.</p>
     `
@@ -358,10 +421,10 @@ const FUNCIONALIDADES = {
       <h4>O que você encontra</h4>
       <ul>
         <li>Contrato por período (dia, semana, mês)</li>
-        <li>Valor por atendimento visível no contrato</li>
-        <li>Observações do tutor (alergias, horários, restrições)</li>
+        <li>Valor por atendimento visível na consulta do contrato</li>
+        <li>Observações do tutor registradas no cadastro do atendimento</li>
         <li>Histórico de cada alteração (data, motivo, quem solicitou)</li>
-        <li>Botão para finalizar atendimento direto no contrato</li>
+        <li>Botão para finalizar o atendimento direto no contrato</li>
       </ul>
       <p class="beneficio">💡 O cliente sabe o que contratou. Você sabe o que entregar.</p>
     `
