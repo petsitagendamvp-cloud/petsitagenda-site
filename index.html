@@ -13,7 +13,7 @@
 
 <header class="topo">
   <div class="container topo-conteudo">
-    <a href="/" class="logo">
+    <a href="index.html" class="logo">
       <img src="logo-horizontal.png" alt="PetSitAgenda">
     </a>
     <nav class="menu">
@@ -78,34 +78,67 @@
   </div>
 </section>
 
-<!-- COMO FUNCIONA -->
+<!-- COMO FUNCIONA + CARROSSEL -->
 <section class="secao secao-clara">
   <div class="container">
     <h2>Como funciona</h2>
     <p class="subtitulo">Em 4 passos, você profissionaliza seu atendimento</p>
 
-    <div class="grid-cards">
+    <div class="grid-passos">
       <div class="card passo">
         <div class="passo-numero">1</div>
         <h3>Cadastre seus serviços</h3>
-        <p>Cadastre os serviços que você oferece, com preços, adicionais e horários. Tudo personalizável.</p>
+        <p>Cadastre os serviços que você oferece, com preços, adicionais e horários.</p>
       </div>
       <div class="card passo">
         <div class="passo-numero">2</div>
         <h3>Crie os atendimentos</h3>
-        <p>Vincule tutor, pet e serviço em segundos. Contratos por período ou avulsos, com observações.</p>
+        <p>Vincule tutor, pet e serviço em segundos. Contratos por período ou avulsos.</p>
       </div>
       <div class="card passo">
         <div class="passo-numero">3</div>
         <h3>Controle o financeiro</h3>
-        <p>Finalize o atendimento, a cobrança é gerada automaticamente, e registre o pagamento quando receber.</p>
+        <p>Finalize o atendimento, a cobrança é gerada automaticamente.</p>
       </div>
       <div class="card passo">
         <div class="passo-numero">4</div>
         <h3>Acompanhe o histórico</h3>
-        <p>Consulte todos os atendimentos realizados, com tutor, pet, serviço e valores. Veja também o total pendente e o total já recebido.</p>
+        <p>Consulte atendimentos, valores e totais em um só lugar.</p>
       </div>
     </div>
+
+    <div class="carrossel-wrapper">
+      <button class="carrossel-btn carrossel-prev" onclick="carrosselAnterior()">‹</button>
+
+      <div class="carrossel-viewport">
+        <div class="carrossel-trilha" id="carrossel">
+          <div class="carrossel-item">
+            <div class="celular"><img src="tela-painel.jpg" alt="Painel"></div>
+            <p class="carrossel-legenda">Painel — visão do dia</p>
+          </div>
+          <div class="carrossel-item">
+            <div class="celular"><img src="tela-agenda.jpg" alt="Agenda"></div>
+            <p class="carrossel-legenda">Agenda — atendimentos e filtros</p>
+          </div>
+          <div class="carrossel-item">
+            <div class="celular"><img src="tela-tutores.jpg" alt="Tutores e pets"></div>
+            <p class="carrossel-legenda">Tutores e pets</p>
+          </div>
+          <div class="carrossel-item">
+            <div class="celular"><img src="tela-financeiro.jpg" alt="Financeiro"></div>
+            <p class="carrossel-legenda">Financeiro — pendências e pagos</p>
+          </div>
+          <div class="carrossel-item">
+            <div class="celular"><img src="tela-contrato.jpg" alt="Contrato"></div>
+            <p class="carrossel-legenda">Contrato — tudo registrado</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="carrossel-btn carrossel-next" onclick="carrosselProximo()">›</button>
+    </div>
+
+    <div class="carrossel-indicadores" id="carrossel-indicadores"></div>
   </div>
 </section>
 
@@ -226,7 +259,7 @@
 
         <p>Enquanto isso, informações se perdiam, cobranças eram esquecidas e horários se confundiam.</p>
 
-        <p>Decidi criar o PetSitAgenda para resolver isso: uma ferramenta completa, simples de usar, que cuida da parte burocrática enquanto você cuida do que ama.</p>
+        <p>Decidi criar o PetSitAgenda para resolver isso: uma ferramenta completa, simples de usar, que cuida da parte burocrática enquanto você cuida do&nbsp;que&nbsp;ama.</p>
 
         <p>Estou construindo isso no Brasil, para profissionais brasileiros. Se tiver sugestões ou críticas, entre em contato pelo formulário de suporte — sua opinião ajuda a melhorar. 🐾</p>
 
@@ -247,7 +280,6 @@
     <p class="subtitulo">Comece grátis e cresça quando precisar</p>
 
     <div class="grid-planos grid-planos-2">
-      <!-- GRATUITO -->
       <div class="card plano">
         <div class="plano-topo">
           <h3>Gratuito</h3>
@@ -263,7 +295,6 @@
         <a href="https://petsitagenda-frontend.vercel.app" class="btn btn-secundario btn-bloco" target="_blank" rel="noopener">Começar agora</a>
       </div>
 
-      <!-- PROFISSIONAL -->
       <div class="card plano plano-destaque">
         <span class="selo">Em finalização</span>
         <div class="plano-topo">
@@ -326,7 +357,7 @@
   </div>
 </section>
 
-<!-- MODAL DE FUNCIONALIDADES -->
+<!-- MODAL -->
 <div id="modal-func" class="modal" onclick="if(event.target===this)fecharFunc()">
   <div class="modal-card">
     <button class="modal-fechar" onclick="fecharFunc()">×</button>
@@ -457,6 +488,40 @@ function abrirFunc(chave) {
 function fecharFunc() {
   document.getElementById("modal-func").style.display = "none";
 }
+
+// ============ CARROSSEL ============
+let carrosselIdx = 0;
+const totalSlides = 5;
+
+function atualizarCarrossel() {
+  const trilha = document.getElementById("carrossel");
+  if (!trilha) return;
+  trilha.style.transform = `translateX(-${carrosselIdx * 100}%)`;
+
+  const ind = document.getElementById("carrossel-indicadores");
+  if (ind) {
+    ind.innerHTML = Array.from({ length: totalSlides }).map((_, i) =>
+      `<span class="dot ${i === carrosselIdx ? 'ativo' : ''}" onclick="irParaSlide(${i})"></span>`
+    ).join("");
+  }
+}
+
+function carrosselProximo() {
+  carrosselIdx = (carrosselIdx + 1) % totalSlides;
+  atualizarCarrossel();
+}
+
+function carrosselAnterior() {
+  carrosselIdx = (carrosselIdx - 1 + totalSlides) % totalSlides;
+  atualizarCarrossel();
+}
+
+function irParaSlide(i) {
+  carrosselIdx = i;
+  atualizarCarrossel();
+}
+
+atualizarCarrossel();
 </script>
 
 </body>

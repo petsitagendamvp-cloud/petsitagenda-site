@@ -692,3 +692,128 @@ input:focus, select:focus, textarea:focus {
 
   .secao-cta h2 { font-size: 1.5rem; }
 }
+
+/* ============================================
+   PASSOS EM LINHA
+   ============================================ */
+.grid-passos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 56px;
+}
+
+/* ============================================
+   CARROSSEL
+   ============================================ */
+.carrossel-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.carrossel-viewport {
+  flex: 1;
+  overflow: hidden;
+  border-radius: var(--raio);
+}
+
+.carrossel-trilha {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carrossel-item {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+}
+
+.carrossel-legenda {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--cor-texto-suave);
+  text-align: center;
+}
+
+.celular {
+  width: 100%;
+  max-width: 640px;
+  background: #fff;
+  border-radius: var(--raio);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.celular img {
+  width: 100%;
+  height: auto;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.carrossel-btn {
+  background: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--cor-laranja-escuro);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.carrossel-btn:hover {
+  background: var(--cor-laranja);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.carrossel-indicadores {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.carrossel-indicadores .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #D9D4CC;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.carrossel-indicadores .dot.ativo {
+  background: var(--cor-laranja);
+  transform: scale(1.3);
+}
+
+@media (max-width: 900px) {
+  .grid-passos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-passos {
+    grid-template-columns: 1fr;
+  }
+  .celular {
+    width: 220px;
+  }
+  .carrossel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+}
