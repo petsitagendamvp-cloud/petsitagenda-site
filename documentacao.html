@@ -98,24 +98,47 @@
         <summary>Agenda</summary>
         <div class="faq-conteudo">
           <h4>Criar atendimento</h4>
-          <p>No <strong>Painel</strong> ou na <strong>Agenda</strong>, clique em <strong>+ Novo atendimento</strong>. Selecione tutor, pet, serviço, datas e forma de cobrança. Se for serviço de Duração, informe a hora de início.</p>
+          <p>No <strong>Painel</strong> ou na <strong>Agenda</strong>, clique em <strong>+ Novo atendimento</strong>. Selecione tutor, pet, serviço, datas e forma de cobrança.</p>
+          <p>Se o serviço for do tipo <strong>Duração</strong>, informe a hora de início. Se for do tipo <strong>Diária</strong>, marque se quer incluir sábados, domingos e feriados no período.</p>
 
           <h4>Contratos por período</h4>
           <p>Se você criar um contrato de vários dias (ex: 1 a 5 de outubro), o sistema <strong>desmembra em um lançamento por dia</strong> na agenda. Assim você acompanha dia a dia e cobra conforme configurado.</p>
 
+          <h4>Sobre feriados</h4>
+          <p>Feriados nacionais são detectados automaticamente. Se você marcou <strong>"Incluir feriados"</strong>, o sistema gera o atendimento e aplica o valor adicional configurado no serviço. Se desmarcou, feriados são pulados do período.</p>
+
           <h4>Ações por atendimento</h4>
           <ul>
-            <li><strong>Contrato</strong>: abre os detalhes, valor e histórico de alterações.</li>
-            <li><strong>Editar</strong>: altera data e hora (com registro de motivo e quem solicitou).</li>
-            <li><strong>Cancelar</strong>: só se ainda estiver Agendado.</li>
-            <li><strong>Finalizar</strong>: gera cobrança no Financeiro.</li>
+            <li><strong>Detalhes</strong>: abre o resumo do contrato com valor, período e histórico.</li>
+            <li><strong>Finalizar</strong>: marca como Realizado e gera cobrança no Financeiro.</li>
           </ul>
 
           <h4>Filtros</h4>
-          <p>Filtre por <strong>período</strong> (hoje, 7, 15, 30, 60 ou 90 dias) e por <strong>status</strong> (agendados, realizados, cancelados). Os filtros ficam salvos no seu navegador.</p>
+          <p>Filtre por <strong>período</strong> (hoje, 7, 15, 30 ou 90 dias), <strong>status</strong>, <strong>tutor</strong>, <strong>pet</strong> e <strong>serviço</strong>. Os filtros ficam salvos no seu navegador.</p>
 
-          <h4>Pernoite e feriados</h4>
-          <p>Em serviços com pernoite, o sistema gera 1 atendimento por noite. Feriados nacionais são detectados automaticamente e recebem o valor configurado no serviço.</p>
+          <h4>Pernoite</h4>
+          <p>Em serviços com pernoite, o sistema gera 1 atendimento por noite. O dia de check-out não é cobrado.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Editar contrato e atendimentos</summary>
+        <div class="faq-conteudo">
+          <h4>Quando posso editar o contrato completo</h4>
+          <p>Enquanto <strong>nenhum atendimento do contrato foi finalizado</strong>, você pode editar tudo pela tela de <strong>Detalhes → Editar contrato</strong>:</p>
+          <ul>
+            <li>Serviço</li>
+            <li>Data de início e fim</li>
+            <li>Hora padrão</li>
+            <li>Incluir sábados, domingos e feriados</li>
+          </ul>
+          <p>Ao salvar, todos os atendimentos agendados são recalculados automaticamente.</p>
+
+          <h4>Quando já existe atendimento finalizado</h4>
+          <p>Se algum atendimento do contrato já foi finalizado, o sistema <strong>permite editar somente os atendimentos ainda agendados</strong>, individualmente (data, hora e observações). A data não pode ser alterada, apenas a hora e as observações.</p>
+
+          <h4>Histórico de alterações</h4>
+          <p>Toda alteração fica registrada no histórico do contrato com: data/hora, valor anterior, valor novo, motivo e quem solicitou (Tutor, Profissional ou Outro).</p>
         </div>
       </details>
 
@@ -128,25 +151,14 @@
           <h4>Registrar pagamento</h4>
           <p>Localize o pendente, clique em <strong>Registrar pagamento</strong>, escolha a forma (Pix, dinheiro, cartão, transferência) e confirme. Um recibo é enviado automaticamente por e-mail ao tutor.</p>
 
+          <h4>Cancelar cobrança</h4>
+          <p>Se precisar cancelar uma cobrança (ex: gerada por engano em teste), clique em <strong>Cancelar</strong> ao lado da cobrança pendente. A cobrança é removida e o atendimento volta a ficar disponível.</p>
+
           <h4>Painel do financeiro</h4>
           <p>No topo você vê o <strong>Total Pendente</strong> e o <strong>Total Recebido</strong>. Abaixo, a lista de cobranças pendentes e o histórico de pagamentos em ordem de data.</p>
 
           <h4>Cobrança agrupada</h4>
           <p>Contratos com modo <strong>No final do período</strong> agrupam todos os pendentes em uma única cobrança por e-mail.</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>Contratos</summary>
-        <div class="faq-conteudo">
-          <h4>O que é um contrato</h4>
-          <p>É o vínculo entre tutor, pet e serviço por um período. Um contrato gera vários atendimentos (um por dia).</p>
-
-          <h4>Consultar um contrato</h4>
-          <p>Na Agenda, clique em <strong>Contrato</strong> em qualquer atendimento. Você vê o tutor, pet, serviço, período, valor por atendimento, forma de cobrança e histórico de alterações.</p>
-
-          <h4>Alterar data ou hora</h4>
-          <p>É possível alterar a data e a hora de um atendimento agendado. <strong>O serviço não pode ser alterado</strong> depois que o contrato é criado. Todas as alterações ficam registradas com motivo e quem solicitou.</p>
         </div>
       </details>
 
@@ -167,6 +179,13 @@
             <li>Toque no botão <strong>Compartilhar</strong> (quadrado com seta para cima).</li>
             <li>Escolha <strong>"Adicionar à Tela de Início"</strong>.</li>
             <li>Confirme. O ícone aparece na sua tela como um app.</li>
+          </ul>
+
+          <h4>Computador (Chrome ou Edge)</h4>
+          <ul>
+            <li>Abra o PetSitAgenda no Chrome ou Edge.</li>
+            <li>Clique no ícone de <strong>instalar</strong> na barra de endereço (telinha com seta), ou no menu <strong>(três pontinhos)</strong> → <strong>"Salvar e compartilhar"</strong> → <strong>"Instalar PetSitAgenda"</strong>.</li>
+            <li>Confirme. O app abre em janela própria.</li>
           </ul>
 
           <p class="beneficio">💡 Depois de adicionar, o PetSitAgenda abre em tela cheia, como um app nativo.</p>
