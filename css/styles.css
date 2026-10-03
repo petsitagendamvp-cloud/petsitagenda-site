@@ -4,6 +4,7 @@
 :root {
   --cor-laranja: #F15A29;
   --cor-laranja-escuro: #C94820;
+  --cor-laranja-texto: #B03F17;
   --cor-verde: #1F7A3E;
   --cor-verde-claro: #D9E8DD;
   --cor-fundo: #E8F0EA;
@@ -167,7 +168,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn:hover { filter: brightness(0.95); }
-.btn-primario { background: var(--cor-laranja-escuro); color: #fff; }
+.btn-primario { background: var(--cor-laranja); color: #fff; }
 .btn-secundario { background: var(--cor-card); color: var(--cor-texto); border: 2px solid var(--cor-borda); }
 .btn-lg { padding: 16px 28px; font-size: 16px; }
 .btn-bloco { width: 100%; }
@@ -287,7 +288,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   margin-top: 12px;
   padding: 6px 0;
-  color: var(--cor-laranja-escuro);
+  color: var(--cor-laranja-texto);
   font-weight: 600;
   font-size: 14px;
 }
