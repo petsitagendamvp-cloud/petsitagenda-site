@@ -28,7 +28,7 @@
 
 body {
   margin: 0;
-  font-family: var(--fonte);
+  font-fly: var(--fonte);
   background: var(--cor-fundo);
   color: var(--cor-texto);
   line-height: 1.6;
@@ -979,7 +979,7 @@ textarea:focus-visible {
   height: 48px;
   font-size: 24px;
   font-weight: 700;
-  color: var(--cor-laranja-escuro);
+  color: var(--cor-laranja-texto);
   cursor: pointer;
   flex-shrink: 0;
   transition: background 0.2s, transform 0.2s;
