@@ -9,6 +9,9 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="css/styles.css">
 </head>
+
+
+
 <body>
 
 <header class="topo">
@@ -16,15 +19,18 @@
     <a href="index.html" class="logo">
       <img src="logo-horizontal.png" alt="PetSitAgenda">
     </a>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <nav class="menu">
       <a href="index.html">Início</a>
       <a href="index.html#funcionalidades">Funcionalidades</a>
       <a href="index.html#sobre">Sobre</a>
       <a href="index.html#planos">Planos</a>
-      <a href="faq.html">FAQ</a>
-      <a href="suporte.html">Suporte</a>
-      <a href="documentacao.html">Documentação</a>
-      <a href="https://petsitagenda-frontend.vercel.app" class="btn btn-primario" target="_blank" rel="noopener">Cadastro / Login</a>
+      <a href="duvidas.html">Dúvidas</a>
+      <a href="https://petsitagenda-frontend.vercel.app" class="btn btn-primario" target="_blank" rel="noopener">Login</a>
     </nav>
   </div>
 </header>
@@ -76,20 +82,56 @@
 </section>
 
 <footer class="rodape">
-  <div class="container rodape-conteudo">
-    <div>
-      <strong>PetSitAgenda</strong>
-      <p>Feito no Brasil para quem cuida de pets.</p>
+  <div class="container">
+    <div class="rodape-grid">
+
+      <!-- Coluna 1: Marca -->
+      <div class="rodape-col">
+        <strong class="rodape-marca">PetSitAgenda</strong>
+        <p class="rodape-slogan">Feito no Brasil para quem cuida de pets.</p>
+
+        <a href="https://www.instagram.com/petsitagenda" target="_blank" rel="noopener" class="rodape-social" aria-label="Instagram do PetSitAgenda">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          <span>@petsitagenda</span>
+        </a>
+
+        <p class="rodape-email">
+          <a href="mailto:contato@petsitagenda.com.br">contato@petsitagenda.com.br</a>
+        </p>
+      </div>
+
+      <!-- Coluna 2: Navegação -->
+      <div class="rodape-col">
+        <h4 class="rodape-titulo">Navegação</h4>
+        <ul class="rodape-lista">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="index.html#funcionalidades">Funcionalidades</a></li>
+          <li><a href="index.html#sobre">Sobre</a></li>
+          <li><a href="index.html#planos">Planos</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 3: Ajuda & Legal -->
+      <div class="rodape-col">
+        <h4 class="rodape-titulo">Ajuda & Legal</h4>
+        <ul class="rodape-lista">
+          <li><a href="duvidas.html">Dúvidas</a></li>
+          <li><a href="suporte.html">Suporte</a></li>
+          <li><a href="termos-uso.html">Termos de Uso</a></li>
+          <li><a href="privacidade.html">Política de Privacidade</a></li>
+        </ul>
+      </div>
+
     </div>
-    <div class="rodape-links">
-      <a href="index.html">Início</a>
-      <a href="faq.html">FAQ</a>
-      <a href="suporte.html">Suporte</a>
-      <a href="documentacao.html">Documentação</a>
-      <a href="termos-uso.html">Termos de Uso</a>
-      <a href="privacidade.html">Privacidade</a>
-    </div>
-    <p class="rodape-copy">© 2026 PetSitAgenda. Todos os direitos reservados.</p>
+
+    <p class="rodape-copy">
+      © 2026 PetSitAgenda. Todos os direitos reservados. Desenvolvido por
+      <a href="https://www.linkedin.com/in/CLAUDIAMCDIAS" target="_blank" rel="noopener">Claudia Dias</a>
+    </p>
   </div>
 </footer>
 
@@ -110,6 +152,23 @@
     );
     window.location.href = `mailto:contato@petsitagenda.com.br?subject=${encodeURIComponent("[PetSitAgenda] " + assunto)}&body=${corpo}`;
   }
+</script>
+
+<script>
+function toggleMenu() {
+  document.querySelector(".menu").classList.toggle("aberto");
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menu = document.querySelector(".menu");
+  if (!menu) return;
+
+  menu.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+      menu.classList.remove("aberto");
+    });
+  });
+});
 </script>
 
 </body>

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PetSitAgenda - Gestão para profissionais que cuidam de pets</title>
-<meta name="description" content="Sistema brasileiro de agenda e gestão financeira para profissionais que trabalham com pets. Organize tutores, pets, atendimentos e cobranças em um só lugar.">
+<title>Planos - PetSitAgenda</title>
+<meta name="description" content="Conheça os planos do PetSitAgenda: comece grátis e cresça quando precisar.">
 <link rel="icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="nova-logo 26092026">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,9 +17,6 @@
 
 <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo</a>
 
-<!-- ============================ -->
-<!-- HEADER                       -->
-<!-- ============================ -->
 <header class="topo">
   <div class="container topo-conteudo">
     <a href="index.html" class="logo">
@@ -31,10 +28,10 @@
       <span></span>
     </button>
     <nav class="menu">
-      <a href="index.html" class="ativo">Início</a>
+      <a href="index.html">Início</a>
       <a href="funcionalidades.html">Funcionalidades</a>
       <a href="sobre.html">Sobre</a>
-      <a href="planos.html">Planos</a>
+      <a href="planos.html" class="ativo">Planos</a>
       <a href="duvidas.html">Dúvidas</a>
       <a href="https://petsitagenda-frontend.vercel.app" class="btn btn-primario" target="_blank" rel="noopener">Login</a>
     </nav>
@@ -43,29 +40,7 @@
 
 <main id="conteudo-principal">
 
-<!-- ============================ -->
-<!-- HERO                         -->
-<!-- ============================ -->
-<section class="hero">
-  <div class="container hero-conteudo">
-    <div class="hero-texto">
-      <span class="selo-hero">🐾 Para quem cuida de pets no Brasil</span>
-      <h1>A gestão completa para quem cuida de pets</h1>
-      <p>O PetSitAgenda foi criado para profissionais que trabalham com pets. Organize tutores, pets, atendimentos, contratos e financeiro em um só lugar. Sem planilha, sem caderno, sem app de clínica adaptado.</p>
-      <div class="hero-botoes">
-        <a href="https://petsitagenda-frontend.vercel.app" class="btn btn-primario btn-lg" target="_blank" rel="noopener">Começar grátis</a>
-        <a href="funcionalidades.html" class="btn btn-secundario btn-lg">Ver funcionalidades</a>
-      </div>
-    </div>
-    <div class="hero-imagem">
-      <img src="foto-hero.jpg" alt="Pets cuidados com carinho">
-    </div>
-  </div>
-</section>
-
-<!-- ============================ -->
-<!-- PARA QUEM É                  -->
-<!-- ============================ -->
+<!-- PARA QUEM É -->
 <section class="secao">
   <div class="container">
     <h2>Para quem é o PetSitAgenda</h2>
@@ -96,75 +71,82 @@
   </div>
 </section>
 
-<!-- ============================ -->
-<!-- COMO FUNCIONA + CARROSSEL    -->
-<!-- ============================ -->
+<!-- PLANOS -->
 <section class="secao">
   <div class="container">
-    <h2>Como funciona</h2>
-    <p class="subtitulo">Em 4 passos, você profissionaliza seu atendimento</p>
+    <h2>Planos</h2>
+    <p class="subtitulo">Comece grátis e cresça quando precisar</p>
 
-    <div class="grid-passos">
-      <div class="card passo">
-        <div class="passo-numero">1</div>
-        <h3>Cadastre seus serviços</h3>
-        <p>Cadastre os serviços que você oferece, com preços, adicionais e horários.</p>
-      </div>
-      <div class="card passo">
-        <div class="passo-numero">2</div>
-        <h3>Crie os atendimentos</h3>
-        <p>Vincule tutor, pet e serviço em segundos. Contratos por período ou avulsos.</p>
-      </div>
-      <div class="card passo">
-        <div class="passo-numero">3</div>
-        <h3>Controle o financeiro</h3>
-        <p>Finalize o atendimento, a cobrança é gerada automaticamente.</p>
-      </div>
-      <div class="card passo">
-        <div class="passo-numero">4</div>
-        <h3>Acompanhe o histórico</h3>
-        <p>Consulte atendimentos, valores e totais em um só lugar.</p>
-      </div>
-    </div>
-
-    <div class="carrossel-wrapper">
-      <button class="carrossel-btn carrossel-prev" onclick="carrosselAnterior()">‹</button>
-
-      <div class="carrossel-viewport">
-        <div class="carrossel-trilha" id="carrossel">
-          <div class="carrossel-item">
-            <div class="celular"><img src="tela-painel.jpg" alt="Painel"></div>
-            <p class="carrossel-legenda">Painel. Visão do dia</p>
-          </div>
-          <div class="carrossel-item">
-            <div class="celular"><img src="tela-agenda.jpg" alt="Agenda"></div>
-            <p class="carrossel-legenda">Agenda. Atendimentos e filtros</p>
-          </div>
-          <div class="carrossel-item">
-            <div class="celular"><img src="tela-tutores.jpg" alt="Tutores e pets"></div>
-            <p class="carrossel-legenda">Tutores e pets</p>
-          </div>
-          <div class="carrossel-item">
-            <div class="celular"><img src="tela-financeiro.jpg" alt="Financeiro"></div>
-            <p class="carrossel-legenda">Financeiro. Pendências e pagos</p>
-          </div>
-          <div class="carrossel-item">
-            <div class="celular"><img src="tela-contrato.jpg" alt="Contrato"></div>
-            <p class="carrossel-legenda">Contrato. Tudo registrado</p>
-          </div>
+    <div class="grid-planos grid-planos-2">
+      <div class="card plano">
+        <div class="plano-topo">
+          <h3>Gratuito</h3>
+          <p class="plano-desc">Perfeito para começar a se organizar</p>
         </div>
+        <p class="preco">R$ 0<span>/mês</span></p>
+        <ul>
+          <li>Até <strong>50 tutores</strong></li>
+          <li>Serviços e agenda completos</li>
+          <li>Financeiro básico</li>
+          <li>Envio automático de cobranças e recibos por e-mail aos tutores</li>
+        </ul>
+        <a href="https://petsitagenda-frontend.vercel.app" class="btn btn-secundario btn-bloco" target="_blank" rel="noopener">Começar agora</a>
       </div>
 
-      <button class="carrossel-btn carrossel-next" onclick="carrosselProximo()">›</button>
+      <div class="card plano plano-destaque">
+        <span class="selo">Em finalização</span>
+        <div class="plano-topo">
+          <h3>Profissional</h3>
+          <p class="plano-desc">Para quem quer crescer sem limites</p>
+        </div>
+        <p class="preco">Em breve</p>
+        <ul>
+          <li><strong>Tutores ilimitados</strong></li>
+          <li>Serviços, agenda e financeiro <strong>completos</strong></li>
+          <li><strong>Consultas e relatórios</strong> por período, tutor, pet ou serviço</li>
+          <li>Envio automático de cobranças e recibos por e-mail</li>
+          <li>E-mails com a sua marca (o tutor não vê o PetSitAgenda)</li>
+          <li>Suporte prioritário</li>
+        </ul>
+        <a href="suporte.html" class="btn btn-primario btn-bloco">Quero saber mais</a>
+        <p class="plano-nota">Entre em contato para saber quando estará disponível.</p>
+      </div>
     </div>
-
-    <div class="carrossel-indicadores" id="carrossel-indicadores"></div>
   </div>
 </section>
 
-<!-- ============================ -->
-<!-- CTA FINAL                    -->
-<!-- ============================ -->
+<!-- MINI FAQ -->
+<section class="secao">
+  <div class="container">
+    <h2>Perguntas frequentes</h2>
+    <p class="subtitulo">Dúvidas? Veja as respostas mais comuns</p>
+
+    <div class="grid-faq">
+      <div class="faq-item">
+        <h4>Preciso instalar algum aplicativo?</h4>
+        <p>Não. O PetSitAgenda funciona direto no navegador do celular, tablet ou computador.</p>
+      </div>
+      <div class="faq-item">
+        <h4>O plano gratuito tem limite de tempo?</h4>
+        <p>Não. Você pode usar o plano gratuito pelo tempo que quiser, com até 50 tutores.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Posso cancelar quando quiser?</h4>
+        <p>Sim. Sem multa, sem burocracia. Você cancela com um clique.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Meus dados ficam seguros?</h4>
+        <p>Sim. Usamos conexão criptografada e backup automático na nuvem.</p>
+      </div>
+    </div>
+
+    <p class="faq-link">
+      <a href="duvidas.html">Ver todas as perguntas →</a>
+    </p>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
 <section class="secao secao-cta">
   <div class="container cta-conteudo">
     <h2>Pronto para se organizar?</h2>
@@ -175,14 +157,10 @@
 
 </main>
 
-<!-- ============================ -->
-<!-- RODAPÉ                       -->
-<!-- ============================ -->
 <footer class="rodape">
   <div class="container">
     <div class="rodape-grid">
 
-      <!-- Coluna 1: Marca -->
       <div class="rodape-col">
         <strong class="rodape-marca">PetSitAgenda</strong>
         <p class="rodape-slogan">Feito no Brasil para quem cuida de pets.</p>
@@ -201,7 +179,6 @@
         </p>
       </div>
 
-      <!-- Coluna 2: Navegação -->
       <div class="rodape-col">
         <h4 class="rodape-titulo">Navegação</h4>
         <ul class="rodape-lista">
@@ -212,7 +189,6 @@
         </ul>
       </div>
 
-      <!-- Coluna 3: Ajuda & Legal -->
       <div class="rodape-col">
         <h4 class="rodape-titulo">Ajuda & Legal</h4>
         <ul class="rodape-lista">
@@ -248,40 +224,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
-// ============ CARROSSEL ============
-let carrosselIdx = 0;
-const totalSlides = 5;
-
-function atualizarCarrossel() {
-  const trilha = document.getElementById("carrossel");
-  if (!trilha) return;
-  trilha.style.transform = `translateX(-${carrosselIdx * 100}%)`;
-
-  const ind = document.getElementById("carrossel-indicadores");
-  if (ind) {
-    ind.innerHTML = Array.from({ length: totalSlides }).map((_, i) =>
-      `<span class="dot ${i === carrosselIdx ? 'ativo' : ''}" onclick="irParaSlide(${i})"></span>`
-    ).join("");
-  }
-}
-
-function carrosselProximo() {
-  carrosselIdx = (carrosselIdx + 1) % totalSlides;
-  atualizarCarrossel();
-}
-
-function carrosselAnterior() {
-  carrosselIdx = (carrosselIdx - 1 + totalSlides) % totalSlides;
-  atualizarCarrossel();
-}
-
-function irParaSlide(i) {
-  carrosselIdx = i;
-  atualizarCarrossel();
-}
-
-atualizarCarrossel();
 </script>
 
 </body>
