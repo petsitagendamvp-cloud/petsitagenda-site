@@ -602,10 +602,12 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.9;
   transition: opacity 0.2s, color 0.2s;
   margin-bottom: 8px;
+  min-height: 44px;
+  padding: 8px 0;
 }
 
 .rodape-social:hover {
-  color: #FFB89A;
+  color: var(--cor-laranja);
   opacity: 1;
 }
 
@@ -621,7 +623,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .rodape-email a:hover {
-  color: #FFB89A;
+  color: var(--cor-laranja);
 }
 
 /* Títulos das colunas 2 e 3 */
@@ -649,10 +651,13 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   opacity: 0.85;
   transition: opacity 0.2s, color 0.2s;
+  display: inline-block;
+  padding: 6px 0;
+  min-height: 32px;
 }
 
 .rodape-lista a:hover {
-  color: #FFB89A;
+  color: var(--cor-laranja);
   opacity: 1;
 }
 
