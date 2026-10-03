@@ -742,7 +742,7 @@ details.faq-item p {
    FORMULÁRIOS
    ============================================ */
 label {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--cor-texto-suave);
   display: block;
