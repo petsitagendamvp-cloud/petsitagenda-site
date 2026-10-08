@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Bloquear scanners de WordPress (não usamos WordPress)
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/
+Disallow: /xmlrpc.php
+
+# Bloquear arquivos internos
+Disallow: /_vercel/
+
+# Sitemap
+Sitemap: https://www.petsitagenda.com.br/sitemap.xml
